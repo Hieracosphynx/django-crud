@@ -26,9 +26,3 @@ class Student(models.Model):
 
     def __str__(self):
         return self.student_number
-
-    def course_in_list(self):
-        test = []
-        for c in self.COURSE_IN_SCHOOL:
-            test.append(c)
-        return test

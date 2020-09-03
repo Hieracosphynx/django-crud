@@ -2,11 +2,13 @@
 {% block title %}Students | Create{% endblock %}
 
 {% block content %}
-    {% for d in d %}
-        <p>{{ d }}</p>
-    {% endfor %}
     <form action="#" method="POST">
         {% csrf_token %}
-        {{ form.as_p }}
+        {{form}}
+        {% if form.errors %}
+            <p>There's an form.errors</p>
+        {% endif %}
+        <button type="submit" class = "btn btn-primary">Submit</button>
+        
     </form>
 {% endblock %}
