@@ -1,0 +1,12 @@
+{% extends "students/main_template.html" %}
+{% block title %}Students | Create{% endblock %}
+
+{% block content %}
+    {% for d in d %}
+        <p>{{ d }}</p>
+    {% endfor %}
+    <form action="#" method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+    </form>
+{% endblock %}
