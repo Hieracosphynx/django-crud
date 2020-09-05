@@ -1,6 +1,10 @@
 <h3>Django CRUD</h3>
-<p>The sole purpose of this repository is to practice the developer's knowledge in Django.</p>
+<p>The sole purpose of this repository is to practice my knowledge in Django.</p>
 <i>Take note: It is STATICFILES_DIRS not STATIC_DIRS</i>
+
+<h3>Error about objects</h3>
+<p>I am currently using VSCode as my code editor, due to pylint(need research if this is the cause) VSCode red underline the following line "students = Student.objects.order_by('last_name')", this is <b>CORRECT</b></p>
+<p>See <a href="https://github.com/Hieracosphynx/django-crud/blob/teachers_app/teachers/views.py">here</a> on <i>line 25</i></p>
 
 <h3>Mobile Numbers</h3>
 
