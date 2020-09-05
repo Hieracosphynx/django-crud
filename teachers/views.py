@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from .forms import NewTeacherForm
+from  students.models import Student
 # Create your views here.
 def index(request):
     text = "Pick a method."
@@ -19,3 +20,8 @@ def create(request):
             return redirect(request.path_info)
         else:
             return HttpResponse(form.errors)
+
+def listStudents(request):
+    students = Student.objects.order_by('last_name')
+    my_dict = {'students': students}
+    return render(request, 'teachers/list.html', context = my_dict)

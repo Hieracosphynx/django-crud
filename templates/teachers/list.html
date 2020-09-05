@@ -1,0 +1,23 @@
+{% extends 'teachers/main_template.html' %}
+{% block title %}Teachers | List{% endblock %}
+
+{% block content %}
+    <table>
+        <tr> 
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Student Number</th>
+            <th>Address</th>
+            <th>Course</th>
+        </tr>
+        {% for student in students %}
+            <tr>
+                <td>{{ student.first_name }}</td>
+                <td>{{ student.last_name }}</td>
+                <td>{{ student.student_number }}</td>
+                <td>{{ student.student_address }}</td>
+                <td>{{ student.course }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+{% endblock %}
