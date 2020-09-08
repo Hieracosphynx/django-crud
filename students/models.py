@@ -14,7 +14,7 @@ class Student(models.Model):
         (MEDICAL_TECHNOLOGY, 'Medical Technology'),
         (CIVIL_ENGINEER, 'Civil Engineer')
         ]
-    student_number = models.CharField(max_length=20, unique=True)
+    student_number = models.CharField(max_length=20, primary_key=True)
     first_name = models.CharField(max_length=120)
     last_name = models.CharField(max_length=120)
     student_address = models.CharField(max_length=120)

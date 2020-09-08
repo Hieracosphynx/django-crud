@@ -1,0 +1,10 @@
+{% extends 'teachers/main_template.html' %}
+{% block title %}Teachers | Update{% endblock %}
+
+{% block content %}
+    <form action="" method = 'POST'>
+        {% csrf_token %}
+        {{ form }}
+        <button type='submit' class='btn btn-primary'>Submit</button>
+    </form>
+{% endblock %}

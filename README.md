@@ -17,3 +17,22 @@
 <h3>Models</h3>
 <i>https://hackernoon.com/using-enum-as-model-field-choice-in-django-92d8b97aaa63 ; This teaches how to work with Enum. Keeping it for reference</i>
 <b>Only used Django's suggested way in doing Choice. See <a href="https://docs.djangoproject.com/en/3.1/ref/models/fields/#choices">here</a>.</b>
+<<<<<<< HEAD
+=======
+
+<h3>Updating data</h3>
+<p>form = UpdateStudentForm(initial={'student_number': student.student_number, 
+                                        'first_name': student.first_name, 
+                                        'last_name': student.last_name, 
+                                        'student_address': student.student_address,
+                                        'course': student.course})</p>
+<p>Need to research about how to make student numbers to be readonly</p>
+
+<h3>Update</h3>
+<p>When updating, always include in forms.py classes if the selected database has unique constraints, always exclude</p>
+
+<h3>Delete</h3>
+<p>The simplest code with 2 lines of code, but dangerous if precaution are neglected.</p>
+
+<p><b>This CRUD example is just a practice for me. There are errors and much better ways in doing CRUD with Django, but I'm starting with the basics and ignoring better codes and performance wise. </b></p>
+>>>>>>> teachers_app

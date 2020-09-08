@@ -5,10 +5,6 @@
     <form action="#" method="POST">
         {% csrf_token %}
         {{form}}
-        {% if form.errors %}
-            <p>There's an form.errors</p>
-        {% endif %}
         <button type="submit" class = "btn btn-primary">Submit</button>
-        
     </form>
 {% endblock %}
