@@ -29,10 +29,23 @@ def listStudents(request):
 def update(request, id):
     student = Student.objects.get(pk=id)
 
+    if request.method == 'POST':
+        form = UpdateStudentForm(request.POST)
+        
+        if form.is_valid():
+            print('is_valid')
+            # first_name = request.POST['first_name']
+            student.first_name = form.cleaned_data['first_name']
+            student.last_name = form.cleaned_data['last_name']
+            student.student_address = form.cleaned_data['student_address']
+            student.course = form.cleaned_data['course']
+            student.save()
+            return HttpResponse('All good')
+        else:
+            
+            print(student.student_number)
 
-    form = UpdateStudentForm()
-    
-    if request.method == 'GET':
+    else:
         print(request.method)
         form = UpdateStudentForm()
         form = UpdateStudentForm(initial={'student_number': student.student_number, 
@@ -40,11 +53,9 @@ def update(request, id):
                                         'last_name': student.last_name, 
                                         'student_address': student.student_address,
                                         'course': student.course})
-        
         my_dict = {'student': student, 'form': form}
         return render(request, 'teachers/update.html', context = my_dict)
-    else:
-        print(request.method)
+        
         # student = Student.objects.get(pk=id)
         # my_dict = {'student': student}
         # return render(request, 'teachers/update.html', context = my_dict)

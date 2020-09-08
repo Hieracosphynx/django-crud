@@ -12,4 +12,4 @@ class UpdateStudentForm(forms.ModelForm):
     class Meta:
         model = Student
         fields = '__all__'
-        readonly_fields = ['student_number']
+        exclude = ('student_number',)

@@ -25,3 +25,6 @@
                                         'student_address': student.student_address,
                                         'course': student.course})</p>
 <p>Need to research about how to make student numbers to be readonly</p>
+
+<h3>Update</h3>
+<p>When updating, always include in forms.py classes if the selected database has unique constraints, always exclude</p>
