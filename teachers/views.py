@@ -24,6 +24,7 @@ def create(request):
 def listStudents(request):
     students = Student.objects.order_by('last_name')
     my_dict = {'students': students}
+
     return render(request, 'teachers/list.html', context = my_dict)
 
 def update(request, id):
@@ -42,8 +43,7 @@ def update(request, id):
             student.save()
             return HttpResponse('All good')
         else:
-            
-            print(student.student_number)
+            print(form.errors)
 
     else:
         print(request.method)
@@ -59,5 +59,12 @@ def update(request, id):
         # student = Student.objects.get(pk=id)
         # my_dict = {'student': student}
         # return render(request, 'teachers/update.html', context = my_dict)
+
+def delete(request, id):
+    student = Student.objects.get(pk=id)
+    student.delete()
+    print('Successfully deleted')
+    return redirect('/teachers/')
+
 
     

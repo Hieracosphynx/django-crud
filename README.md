@@ -28,3 +28,8 @@
 
 <h3>Update</h3>
 <p>When updating, always include in forms.py classes if the selected database has unique constraints, always exclude</p>
+
+<h3>Delete</h3>
+<p>The simplest code with 2 lines of code, but dangerous if precaution are neglected.</p>
+
+<p><b>This CRUD example is just a practice for me. There are errors and much better ways in doing CRUD with Django, but I'm starting with the basics and ignoring better codes and performance wise. </b></p>
