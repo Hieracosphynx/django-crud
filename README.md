@@ -17,8 +17,6 @@
 <h3>Models</h3>
 <i>https://hackernoon.com/using-enum-as-model-field-choice-in-django-92d8b97aaa63 ; This teaches how to work with Enum. Keeping it for reference</i>
 <b>Only used Django's suggested way in doing Choice. See <a href="https://docs.djangoproject.com/en/3.1/ref/models/fields/#choices">here</a>.</b>
-<<<<<<< HEAD
-=======
 
 <h3>Updating data</h3>
 <p>form = UpdateStudentForm(initial={'student_number': student.student_number, 
@@ -35,4 +33,7 @@
 <p>The simplest code with 2 lines of code, but dangerous if precaution are neglected.</p>
 
 <p><b>This CRUD example is just a practice for me. There are errors and much better ways in doing CRUD with Django, but I'm starting with the basics and ignoring better codes and performance wise. </b></p>
->>>>>>> teachers_app
+
+
+<h3>Django REST framework</h3>
+<p>See tutorial <a href='https://www.django-rest-framework.org/'>here</a>.</p>

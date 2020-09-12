@@ -32,9 +32,16 @@ ALLOWED_HOSTS = []
 
 # Application definition
 
+REST_FRAMEWORK = {
+    'DEFAULT_PERMISSION_CLASSES': [
+        'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly',
+    ]
+}
+
 INSTALLED_APPS = [
     'students',
     'teachers',
+    'rest_framework',
     'phonenumber_field',
     'django.contrib.admin',
     'django.contrib.auth',
