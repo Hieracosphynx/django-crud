@@ -38,3 +38,4 @@
 <h3>Django REST framework</h3>
 <p>See tutorial <a href='https://www.django-rest-framework.org/'>here</a>.</p>
 <p>The <b>quickstart</b> app will be the guinea pig for Django Rest Framework.</p>
+<p>HyperlinkedModelSerializer; "<b>Hyperlinking is good RESTful design.</b>" See about <i>"<a href="https://www.django-rest-framework.org/api-guide/serializers/">Serializers</a>"</i></p>
